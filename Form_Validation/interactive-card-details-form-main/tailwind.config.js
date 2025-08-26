@@ -15,7 +15,7 @@ module.exports = {
         fontBasic: '18 px'
        },
        backgroundImage:{
-        mainMobile:"url(.../src/images/bg-main-mobile.png)",
+        mainMobile:"url(./src/images/bg-main-mobile.png)",
         mainDesktop:"url(./src/images/bg-main-desktop.png)",
        },
        fontFamily:
