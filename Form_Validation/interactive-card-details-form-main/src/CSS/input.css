@@ -6,6 +6,10 @@
     font-family: 'SpaceGrotesk';
     src: url('../fonts/static/SpaceGrotesk-Regular.ttf');
 }
+@font-face {
+    font-family: 'SpaceGroteskBold';
+    src: url('../fonts/static/SpaceGrotesk-Medium.ttf');
+}
  body{
     font-family: 'SpaceGrotesk';
  }
@@ -21,21 +25,27 @@
  header #cardImage > div ,.cardBack , .cardFront{
     width: 65%;
     height: 65%;
+    min-width: 200px;
+    max-width: 320px;
     border-radius: .3rem;
     background-position: center;
     background-size: cover;
  }
   .cardBack , .cardFront{
    height: 20%;
-   width: 90%;
-   max-height: 130px;
+   width: 75%;
+   min-width: 250px;
+   
+   max-height: 230px;
    color: white;
- }
- .cardFront{
-background-image: url(../images/bg-card-front.png);
+  
+
 }
 .cardBack{
-   background-image: url(../images/bg-card-back.png);
+      background-image: url(../images/bg-card-back.png);
+}
+.cardFront{
+      background-image: url(../images/bg-card-front.png);
 }
 .nameHolder_CVC{
    display: flex;
@@ -49,3 +59,17 @@ background-image: url(../images/bg-card-front.png);
  .account_number{
    font-size: clamp(14px , 1% , 20px);
  }
+
+ form{
+   font-family: 'SpaceGroteskBold';
+ }
+ label {
+   letter-spacing: .1rem;
+   margin-bottom: .3rem;
+}
+input {
+   border:  2px solid hsl(270, 3%, 87%);
+   padding: .5rem;
+   border-radius: .5rem;
+   margin-bottom: 1rem;
+}
