@@ -32,12 +32,12 @@
     background-size: cover;
  }
   .cardBack , .cardFront{
-   height: 20%;
+   height: 25%;
    width: 75%;
    min-width: 250px;
-   
    max-height: 230px;
    color: white;
+   
   
 
 }
@@ -72,4 +72,13 @@ input {
    padding: .5rem;
    border-radius: .5rem;
    margin-bottom: 1rem;
+}
+input:hover{
+   cursor: pointer;
+}
+.cardBack:hover , .cardFront:hover{
+   cursor: pointer;
+}
+input:focus{
+   @apply outline-purple-950 ; 
 }
