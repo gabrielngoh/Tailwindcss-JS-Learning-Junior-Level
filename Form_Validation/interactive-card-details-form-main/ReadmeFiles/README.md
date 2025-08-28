@@ -23,7 +23,7 @@ Your users should be able to:
   - Any input field is empty
   - The card number, expiry date, or CVC fields are in the wrong format   
 - View the optimal layout depending on their device's screen size **Done**
-- See hover, active, and focus states for interactive elements on the page 
+- See hover, active, and focus states for interactive elements on the page **Done**
 
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 

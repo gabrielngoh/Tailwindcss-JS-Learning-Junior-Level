@@ -65,13 +65,13 @@
  }
  label {
    letter-spacing: .1rem;
-   margin-bottom: .3rem;
+   margin-top: .4rem;
 }
 input {
    border:  2px solid hsl(270, 3%, 87%);
    padding: .5rem;
    border-radius: .5rem;
-   margin-bottom: 1rem;
+   margin-top: 0.4rem;
 }
 input:hover{
    cursor: pointer;
@@ -81,4 +81,7 @@ input:hover{
 }
 input:focus{
    @apply outline-purple-950 ; 
+}
+form span {
+   @apply text-inputErrorsColorRed text-[10px] block mb-2;
 }

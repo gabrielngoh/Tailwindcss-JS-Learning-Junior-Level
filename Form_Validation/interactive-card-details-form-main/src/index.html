@@ -23,7 +23,10 @@
             <span class="account_number" class="block  tracking-wider text-center">0000 0000 0000 0000</span>
             <div class="nameHolder_CVC" class=" flex justify-between gap-[5%] *:text-gray text-[8px] sm:text-sm">
               <span>JAMES APPLESEED</span>
-              <span>00/00</span>
+              <div>
+                 <span>00
+              </span>/<span>00</span>
+              </div>
             </div>
           </div>
         </div>
@@ -34,13 +37,16 @@
         <div  class="cardBack absolute  translate-y-1/4  lg:shadow-md shadow-purple950  lg:bottom-[37.5%] md:bottom-[50%]  lg:translate-x-[85%] translate-x-[75%]">
           <span class="absolute -translate-y-1/2 text-xs right-[12.5%]  text-gray200 top-1/2">000</span>
         </div>
-        <div class="cardFront flex flex-col justify-between  p-4 absolute lg:translate-x-[60%] translate-x-[50%] top-[20%] -translate-y-[17.5%] ">
+        <div class="cardFront cdFront flex flex-col justify-between  p-4 absolute lg:translate-x-[60%] translate-x-[50%] top-[20%] -translate-y-[17.5%] ">
           <img src="./images/card-logo.svg" class="block w-1/5 " alt="cardLogo">
           <div class="h-1/2 flex  flex-col  justify-between">
             <span class="account_number  block  tracking-wider text-center lg:text-2xl">0000 0000 0000 0000</span>
             <div class="nameHolder_CVC lg:text-sm  *:text-gray200">
               <span>JAMES APPLESEED</span>
-              <span>00/00</span>
+              <div>
+                 <span>00
+              </span>/<span>00</span>
+              </div>
             </div>
           </div>
         </div>
@@ -48,25 +54,34 @@
     <main class="flex items-center md:w-full flex-col md:h-full h-[70%] justify-center">
       <form class="max-w-[420px] w-[90%] h-[75%] px-[5%] text-sm flex flex-col md:justify-center text-purple950 ">
       <label for="Name">CARDHOLDER NAME</label>
-      <input type="text" name="cardName" id="Name" placeholder="e.g. Jane Appleseed" required>
+      <input type="text" name="cardName"  id="Name" maxlength="18" placeholder="e.g. Jane Appleseed" >
+      <span class="Name"></span>
 
       <label for="CardNumber">CARD NUMBER</label>
-      <input type="number" name="CardNumber" id="CardNumber" max="16" placeholder=" e.g. 1234 5678 9123 0000" required>
-
+      <input type="text" name="CardNumber" id="CardNumber" maxlength="19" placeholder=" e.g. 1234 5678 9123 0000" >
+      <span class="cardNumber"></span>
       <div id="Date_CVC" class=" flex justify-between">
-        <div class="Date w-1/2 text-nowrap">
+        <div class="Date w-1/2   text-nowrap">
           <label for="Date">EXP. DATE (MM/YY)</label>
-          <div class="flex  *:mr-2 *:w-1/2">
-            <input type="number" name="Month" id="month"  placeholder="MM" required>        
-            <input type="number" name="Year" id="Year" placeholder="YY" required>   
+          <div class="flex    ">
+            <div class="w-1/2 mr-2  flex flex-col">
+              <input type="text" name="Month" maxlength="2" id="month"  class="w-full mr-2"  placeholder="MM" >
+              <span class="month"></span>
+            </div>        
+            
+            <div class="w-1/2 mr-2 flex flex-col">
+            <input type="text" name="Year" maxlength="2" id="Year" class="w-full mr-2" placeholder="YY" > 
+            <span class="year"></span>
+            </div>  
           </div>
         </div>
         <div class="cVc w-[45%]">
         <label for="CVC">CVC</label>
-        <input class="w-full" type="number" name="Month" id="CVC" placeholder="e.g. 123" required>        
+        <input class="w-full" type="text" maxlength="3" name="Month" id="CVC" placeholder="e.g. 123" >   
+        <span class="cvc"></span>     
         </div>   
       </div>
-      <button type="submit" class=" mt-4 py-4 bg-purple950 rounded-md text-white">Confirm</button>
+      <button type="button" class=" mt-4 py-4 bg-purple950 rounded-md text-white">Confirm</button>
     </form>
     </main>
   </section>
