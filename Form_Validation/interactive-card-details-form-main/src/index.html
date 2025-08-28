@@ -48,25 +48,34 @@
     <main class="flex items-center md:w-full flex-col md:h-full h-[70%] justify-center">
       <form class="max-w-[420px] w-[90%] h-[75%] px-[5%] text-sm flex flex-col md:justify-center text-purple950 ">
       <label for="Name">CARDHOLDER NAME</label>
-      <input type="text" name="cardName" id="Name" placeholder="e.g. Jane Appleseed" required>
+      <input type="text" name="cardName"  id="Name" placeholder="e.g. Jane Appleseed" >
+      <span class="Name"></span>
 
       <label for="CardNumber">CARD NUMBER</label>
-      <input type="number" name="CardNumber" id="CardNumber" max="16" placeholder=" e.g. 1234 5678 9123 0000" required>
-
+      <input type="text" name="CardNumber" id="CardNumber"  placeholder=" e.g. 1234 5678 9123 0000" >
+      <span class="cardNumber"></span>
       <div id="Date_CVC" class=" flex justify-between">
-        <div class="Date w-1/2 text-nowrap">
+        <div class="Date w-1/2   text-nowrap">
           <label for="Date">EXP. DATE (MM/YY)</label>
-          <div class="flex  *:mr-2 *:w-1/2">
-            <input type="number" name="Month" id="month"  placeholder="MM" required>        
-            <input type="number" name="Year" id="Year" placeholder="YY" required>   
+          <div class="flex    ">
+            <div class="w-1/2 mr-2  ">
+              <input type="text" name="Month" maxlength="2" id="month"  class="w-full mr-2"  placeholder="MM" >
+              <span class="month"></span>
+            </div>        
+            
+            <div class="w-1/2 mr-2">
+            <input type="text" name="Year" maxlength="2" id="Year" class="w-full mr-2" placeholder="YY" > 
+            <span class="year"></span>
+            </div>  
           </div>
         </div>
         <div class="cVc w-[45%]">
         <label for="CVC">CVC</label>
-        <input class="w-full" type="number" name="Month" id="CVC" placeholder="e.g. 123" required>        
+        <input class="w-full" type="text" maxlength="3" name="Month" id="CVC" placeholder="e.g. 123" >   
+        <span class="month"></span>     
         </div>   
       </div>
-      <button type="submit" class=" mt-4 py-4 bg-purple950 rounded-md text-white">Confirm</button>
+      <button type="button" class=" mt-4 py-4 bg-purple950 rounded-md text-white">Confirm</button>
     </form>
     </main>
   </section>

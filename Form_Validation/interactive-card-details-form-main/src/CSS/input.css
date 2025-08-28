@@ -82,3 +82,6 @@ input:hover{
 input:focus{
    @apply outline-purple-950 ; 
 }
+form span {
+   @apply text-inputErrorsColorRed;
+}
