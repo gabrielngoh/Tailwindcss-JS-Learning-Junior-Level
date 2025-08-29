@@ -110,3 +110,33 @@ function valpatern (input , index){
             }
                                      } 
         
+                                // submission feature
+submitbtn.addEventListener('click',()=>{
+ 
+    // if (Array.from(validPatternArray).every(
+    //     (_,index)=> validPatternArray[index].test(inputList[index].value)
+    // )){
+    //   console.log('Thanks and see You soon')
+    // }
+    // else{
+    //     console.log('reprendre')
+
+    // }
+const form = document.querySelector('main')
+const isAllInputValid = ()=>{
+(validPatternArray).every( (_,index)=>  validPatternArray[index].test(inputList[index].value))
+}
+    if(isAllInputValid())
+{
+ //form
+
+}
+ 
+else{
+      inputList.forEach((input,index)=>{
+      isFormatValid (input,index)
+      })
+
+    }
+
+})

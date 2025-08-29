@@ -83,9 +83,7 @@ input:focus{
    @apply outline-purple-950 ; 
 }
 form span {
-<<<<<<< HEAD
+
    @apply text-inputErrorsColorRed text-[10px] block mb-2;
-=======
-   @apply text-inputErrorsColorRed;
->>>>>>> b41a24621eb7148bd3668933e3fdf41c8b427bb7
+
 }
