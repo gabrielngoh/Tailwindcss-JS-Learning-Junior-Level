@@ -26,6 +26,11 @@ const [numCard , nameHolder , monthExp , yearExp] = cardFrontContent;
 const cardInformationUpdate = [numCard , nameHolder , monthExp , yearExp , cvcOnCard];
 const cardInformationInitial = ['0000 0000 0000 0000' , 'Jane Appleseed' , '00' , '00' , '000']
 
+const [asideCardNumber, asideCardHolder, asideCardMonth, asideCardYear] = 
+      document.querySelectorAll('aside .cardFront>div span');
+const asideCardCVC = document.querySelector('aside .cardBack span');
+const cardAsideInformationUpdate = [asideCardNumber, asideCardHolder, asideCardMonth, asideCardYear , asideCardCVC];
+
 const nameFormat = /^[a-z]+\s?[a-z]+$/i
 const cardNumber =/^\d{4}\s{1}\d{4}\s{1}\d{4}\s{1}\d{4}\s*$/
 const monthCVC = /^(0[1-9]|1[0-2])$/
@@ -49,9 +54,11 @@ updateCardInputList.forEach((input,index)=>{
     input.addEventListener('input',()=>{
         
         cardInformationUpdate[index].textContent = input.value.toUpperCase();
+        cardAsideInformationUpdate[index].textContent = input.value.toUpperCase();
         if (emptyValueReg.test(input.value))
         {
             cardInformationUpdate[index].textContent = cardInformationInitial[index]
+            cardAsideInformationUpdate[index].textContent = cardInformationInitial[index]
         }
     })
 })
