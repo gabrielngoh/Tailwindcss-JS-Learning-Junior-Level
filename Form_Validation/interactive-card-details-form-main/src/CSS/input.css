@@ -87,7 +87,7 @@ form span {
    @apply text-inputErrorsColorRed text-[10px] block mb-2;
 
 }
-button{
+ button{
    @apply mt-4 py-4 bg-purple950 rounded-md text-white;
 }
 #complete_state{

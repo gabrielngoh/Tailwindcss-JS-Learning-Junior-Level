@@ -126,10 +126,10 @@ form.addEventListener("submit", (e) => {
    
     mainSection.innerHTML = `<div id = "complete_state" class=" text-center *:mb-4">
     <img src="./images/icon-complete.svg" class="w-1/5 mx-auto" alt="icon-complete">
-    <h1 class=" text-purple950 text-xl font-semibold" >THANK YOU ! </h1>
-    <p class=" text-gray400>We've added your card details</p>
-    <button type="button" class=" mt-1">Continue</button>
-    </div>`;
+    <h1 class=" text-purple950 text-xl font-semibold" >T H A N K  Y O U ! </h1>
+    <p class=" text-gray400">We've added your card details</p>
+      <button type="submit" >Continue</button>   
+     </div>`;
 
   } else {
     inputList.forEach((input, index) => {
