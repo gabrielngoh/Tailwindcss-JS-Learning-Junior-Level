@@ -87,3 +87,9 @@ form span {
    @apply text-inputErrorsColorRed text-[10px] block mb-2;
 
 }
+button{
+   @apply mt-4 py-4 bg-purple950 rounded-md text-white;
+}
+#complete_state{
+   @apply max-w-[420px] w-[90%] h-[50%] px-[5%] text-sm flex flex-col md:justify-center text-purple950 ;
+}

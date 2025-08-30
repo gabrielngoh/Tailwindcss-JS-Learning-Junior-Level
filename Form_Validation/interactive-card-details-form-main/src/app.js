@@ -111,32 +111,29 @@ function valpatern (input , index){
                                      } 
         
                                 // submission feature
-submitbtn.addEventListener('click',()=>{
- 
-    // if (Array.from(validPatternArray).every(
-    //     (_,index)=> validPatternArray[index].test(inputList[index].value)
-    // )){
-    //   console.log('Thanks and see You soon')
-    // }
-    // else{
-    //     console.log('reprendre')
+const mainSection = document.querySelector('main')
+const form = document.querySelector('form')
 
-    // }
-const form = document.querySelector('main')
-const isAllInputValid = ()=>{
-(validPatternArray).every( (_,index)=>  validPatternArray[index].test(inputList[index].value))
-}
-    if(isAllInputValid())
-{
- //form
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); 
 
-}
- 
-else{
-      inputList.forEach((input,index)=>{
-      isFormatValid (input,index)
-      })
+  
+  let isAllInputValid = validPatternArray.every((pattern, index) =>
+    pattern.test(inputList[index].value)
+  );
 
-    }
+  if (isAllInputValid) {
+   
+    mainSection.innerHTML = `<div id = "complete_state" class=" text-center *:mb-4">
+    <img src="./images/icon-complete.svg" class="w-1/5 mx-auto" alt="icon-complete">
+    <h1 class=" text-purple950 text-xl font-semibold" >THANK YOU ! </h1>
+    <p class=" text-gray400>We've added your card details</p>
+    <button type="button" class=" mt-1">Continue</button>
+    </div>`;
 
-})
+  } else {
+    inputList.forEach((input, index) => {
+      isFormatValid(input, index);
+    });
+  }
+});
