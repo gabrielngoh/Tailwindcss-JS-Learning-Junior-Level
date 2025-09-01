@@ -4,17 +4,17 @@
 
 @font-face {
     font-family: 'SpaceGrotesk';
-    src: url('../fonts/static/SpaceGrotesk-Regular.ttf');
+    src: url('./fonts/static/SpaceGrotesk-Regular.ttf');
 }
 @font-face {
     font-family: 'SpaceGroteskBold';
-    src: url('../fonts/static/SpaceGrotesk-Medium.ttf');
+    src: url('./fonts/static/SpaceGrotesk-Medium.ttf');
 }
  body{
     font-family: 'SpaceGrotesk';
  }
  header{
-    background-image: url(../images/bg-main-mobile.png);
+    background-image: url(./images/bg-main-mobile.png);
     height: 30%;
     max-height: 200px;
  }
@@ -42,10 +42,10 @@
 
 }
 .cardBack{
-      background-image: url(../images/bg-card-back.png);
+      background-image: url(./images/bg-card-back.png);
 }
 .cardFront{
-      background-image: url(../images/bg-card-front.png);
+      background-image: url(./images/bg-card-front.png);
 }
 .nameHolder_CVC{
    display: flex;
@@ -54,7 +54,7 @@
 }
 
  aside{
-   background-image: url(../images/bg-main-desktop.png);
+   background-image: url(./images/bg-main-desktop.png);
  }
  .account_number{
    font-size: clamp(14px , 1% , 20px);
