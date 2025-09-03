@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@theme{
+    --spacing-header : 12.5%;
+    --spacing-medheader : 10.4%;
+    --spacing-headerPadding : 24px;
+    --spacing-navSmallScreenWidth : 67.7%;
+    --spacing-navMdeiumScreenWidth : 83.4%;
+
+}
+
+header img:first-child{
+    @apply w-[40px] h-[40px]  md:w-[48px] md:h-[48px] object-contain;
+}
+
+
+#closeBtn , header img:nth-child(2){
+    @apply  w-headerPadding h-[21px]  object-contain ;
+}
+
+header nav{
+    @apply h-full  md:w-full   w-navSmallScreenWidth  right-0 top-0 transition-all;
+    background-color: rgb(5, 0, 13);
+}
+header li{
+    @apply relative md:flex md:items-center md:h-full;
+}
+header ul a:hover::before , header ul li:first-child a::before{
+    content: '';
+    @apply w-full h-1 bg-white z-30 absolute bottom-0 ;
+}
+
