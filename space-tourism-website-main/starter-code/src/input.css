@@ -5,7 +5,7 @@
     --spacing-headerPadding : 24px;
     --spacing-navSmallScreenWidth : 67.7%;
     --spacing-navMdeiumScreenWidth : 83.4%;
-
+    --spacing-stickDesktopPosition : (66.6% + 40px);
 }
 
 header img:first-child{
@@ -18,8 +18,12 @@ header img:first-child{
 }
 
 header nav{
-    @apply h-full  md:w-full   w-navSmallScreenWidth  right-0 top-0 transition-all;
-    background-color: rgb(5, 0, 13);
+    @apply lg:relative h-full  md:w-full   w-navSmallScreenWidth  right-0 top-0 transition-all;
+    
+}
+header nav::before {
+    content: '';
+    @apply lg:absolute lg:max-w-[630px] lg:w-[76%] lg:h-px lg:bg-white z-30   lg:-left-stickDesktopPosition lg:bottom-1/2 ;
 }
 header li{
     @apply relative md:flex md:items-center md:h-full;

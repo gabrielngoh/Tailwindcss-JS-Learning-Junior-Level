@@ -10,6 +10,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --blur-md: 12px;
+    --blur-2xl: 40px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -17,6 +18,7 @@
     --spacing-header: 12.5%;
     --spacing-headerPadding: 24px;
     --spacing-navSmallScreenWidth: 67.7%;
+    --spacing-stickDesktopPosition: (66.6% + 40px);
   }
 }
 @layer base {
@@ -297,6 +299,11 @@
       gap: calc(var(--spacing) * 12);
     }
   }
+  .md\:bg-\[url\(\.\/assets\/home\/background-home-tablet\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+  }
   .md\:p-0 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 0);
@@ -305,6 +312,58 @@
   .md\:backdrop-blur-none {
     @media (width >= 48rem) {
       --tw-backdrop-blur:  ;
+      -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+      backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    }
+  }
+  .lg\:h-\[15\.3\%\] {
+    @media (width >= 64rem) {
+      height: 15.3%;
+    }
+  }
+  .lg\:max-h-32 {
+    @media (width >= 64rem) {
+      max-height: calc(var(--spacing) * 32);
+    }
+  }
+  .lg\:w-\[52\%\] {
+    @media (width >= 64rem) {
+      width: 52%;
+    }
+  }
+  .lg\:max-w-\[736px\] {
+    @media (width >= 64rem) {
+      max-width: 736px;
+    }
+  }
+  .lg\:justify-between {
+    @media (width >= 64rem) {
+      justify-content: space-between;
+    }
+  }
+  .lg\:bg-transparent {
+    @media (width >= 64rem) {
+      background-color: transparent;
+    }
+  }
+  .lg\:bg-\[url\(\.\/assets\/home\/background-home-desktop\.jpg\)\] {
+    @media (width >= 64rem) {
+      background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+  }
+  .lg\:bg-top {
+    @media (width >= 64rem) {
+      background-position: top;
+    }
+  }
+  .lg\:pt-10 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:backdrop-blur-2xl {
+    @media (width >= 64rem) {
+      --tw-backdrop-blur: blur(var(--blur-2xl));
       -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
       backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     }
@@ -337,7 +396,34 @@ header nav {
   @media (width >= 48rem) {
     width: 100%;
   }
-  background-color: rgb(5, 0, 13);
+  @media (width >= 64rem) {
+    position: relative;
+  }
+}
+header nav::before {
+  content: '';
+  z-index: 30;
+  @media (width >= 64rem) {
+    position: absolute;
+  }
+  @media (width >= 64rem) {
+    bottom: calc(1/2 * 100%);
+  }
+  @media (width >= 64rem) {
+    left: calc(var(--spacing-stickDesktopPosition) * -1);
+  }
+  @media (width >= 64rem) {
+    height: 1px;
+  }
+  @media (width >= 64rem) {
+    width: 76%;
+  }
+  @media (width >= 64rem) {
+    max-width: 630px;
+  }
+  @media (width >= 64rem) {
+    background-color: var(--color-white);
+  }
 }
 header li {
   position: relative;
