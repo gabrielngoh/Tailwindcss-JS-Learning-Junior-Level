@@ -5,7 +5,19 @@
     --spacing-headerPadding : 24px;
     --spacing-navSmallScreenWidth : 67.7%;
     --spacing-navMdeiumScreenWidth : 83.4%;
-    --spacing-stickDesktopPosition : (66.6% + 40px);
+    --spacing-stickDesktopPosition : calc(66.6% + 40px);
+    --spacing-pdHeroSectionMobile :24px; 
+    --spacing-pdXHeroSectionTablet :40px;
+    --spacing-pdYtab_deskt : 128px;
+    --text-font_Etiquette : clamp(1.1875rem, 0.8574rem + 1.4085vw, 2.125rem);
+    --spacing-btn_dim1 : 144px;
+    --spacing-btn_dim2 : 272px;
+    --text-h1 : clamp(5.75rem, 1.5647rem + 17.8571vw, 10.125rem);
+    --text-h1-md: 10.15rem; 
+    --text-para:clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem); 
+    --color-sticKDesktopColor : #979797;
+    --color-para : #D0D6F9;
+    --breakpoint-deskt:1440px;
 }
 
 header img:first-child{
@@ -18,12 +30,12 @@ header img:first-child{
 }
 
 header nav{
-    @apply lg:relative h-full  md:w-full   w-navSmallScreenWidth  right-0 top-0 transition-all;
+    @apply lg:relative h-full deskt:h-[96px]  md:w-full   w-navSmallScreenWidth  right-0 top-0 transition-all;
     
 }
 header nav::before {
     content: '';
-    @apply lg:absolute lg:max-w-[630px] lg:w-[76%] lg:h-px lg:bg-white z-30   lg:-left-stickDesktopPosition lg:bottom-1/2 ;
+    @apply deskt:absolute  deskt:max-w-[560px]  deskt:w-[76%]  deskt:h-px deskt:bg-sticKDesktopColor z-30   deskt:-left-stickDesktopPosition deskt:bottom-1/2 ;
 }
 header li{
     @apply relative md:flex md:items-center md:h-full;
@@ -32,4 +44,9 @@ header ul a:hover::before , header ul li:first-child a::before{
     content: '';
     @apply w-full h-1 bg-white z-30 absolute bottom-0 ;
 }
-
+main{
+    @apply p-pdHeroSectionMobile  md:px-pdXHeroSectionTablet md:py-pdYtab_deskt 
+}
+main #textHeroSection .etiquette {
+    @apply text-font_Etiquette;
+}

@@ -12,7 +12,7 @@
  <header class="h-header lg:h-[15.3%] lg:max-h-32 lg:pt-10 lg:justify-between md:h-[10.4%]  md:p-0  md:justify-stretch p-headerPadding  flex md:items-center justify-between">
   <img src="./assets/shared/logo.svg" alt="hamburger menu" class="md:mx-10">
   <img src="./assets/shared/icon-hamburger.svg" class="md:hidden " alt="hamburger menu">
-   <nav class=" lg:w-[52%] lg:max-w-[736px] lg:backdrop-blur-2xl lg:bg-transparent md:block md:backdrop-blur-none md:relative  hidden backdrop-blur-md absolute z-10 right-0 pl-8">
+   <nav class="lg:relative lg:w-[52%] lg:max-w-[736px] lg:backdrop-blur-2xl lg:bg-transparent md:block md:backdrop-blur-none md:relative  hidden backdrop-blur-md absolute z-10 right-0 pl-8">
     <div aria-label="close-btn line" class="flex justify-end pr-6 mb-12 md:hidden">
       <img  id="closeBtn" src="./assets/shared/icon-close.svg" class=" mb-12 my-8" alt="close icon"> 
     </div>
@@ -33,16 +33,18 @@
    </nav>
  </header>
  <main>
-     <div class="text" aria-label="text main ">
-        <span aria-label="etiquette">SO , YOU WANT TO TRAVEL TO</span>
-        <h1>SPACE</h1>
-        <p> Let’s face it; if you want to go to space, you might as well genuinely go to 
+     <div id="container_grid" class=" grid  grid-cols-1 grid-rows-2  text-center">
+      <div id="textHeroSection" class="flex flex-col gap-y-headerPadding text-para" aria-label="text main ">
+        <span aria-label="etiquette" class="etiquette">SO , YOU WANT TO TRAVEL TO</span>
+        <h1 class="text-white text-h1  md:text-h1-md">SPACE</h1>
+        <p class=" text-para"> Let’s face it; if you want to go to space, you might as well genuinely go to 
   outer space and not hover kind of on the edge of it. Well sit back, and relax 
   because we’ll give you a truly out of this world experience!</p>
 
      </div>
-     <div aria-label="button main">
-      <button type="button">EXPLORE</button>
+     <div id="buttonHeroSection" aria-label="button main">
+      <button type="button" class=" size-btn_dim1 md:size-btn_dim2 rounded-full   ">EXPLORE</button>
+     </div>
      </div>
  </main>
 </body>
