@@ -13,8 +13,7 @@
     --spacing-btn_dim1 : 144px;
     --spacing-btn_dim2 : 272px;
     --spacing-btn_hover : 327px;
-    --text-h1 : clamp(5.75rem, 1.5647rem + 17.8571vw, 10.125rem);
-    --text-h1-md: 10.15rem; 
+    --text-h1 : clamp(5rem, 3.5915rem + 6.0094vw, 9rem);
     --text-para:clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem); 
     --text-btn-text : clamp(1.125rem, 0.2858rem + 3.5806vw, 2rem);
     --color-sticKDesktopColor : #979797;
