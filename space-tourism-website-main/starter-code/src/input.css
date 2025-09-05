@@ -9,28 +9,90 @@
     --spacing-pdHeroSectionMobile :24px; 
     --spacing-pdXHeroSectionTablet :40px;
     --spacing-pdYtab_deskt : 128px;
-    --text-font_Etiquette : clamp(1.1875rem, 0.8574rem + 1.4085vw, 2.125rem);
     --spacing-btn_dim1 : 144px;
     --spacing-btn_dim2 : 272px;
     --spacing-btn_hover : 327px;
+    
+    --text-font_Etiquette : clamp(1.1875rem, 0.8574rem + 1.4085vw, 2.125rem);
     --text-h1 : clamp(5rem, 3.5915rem + 6.0094vw, 9rem);
     --text-para:clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem); 
     --text-btn-text : clamp(1.125rem, 0.2858rem + 3.5806vw, 2rem);
+
     --color-sticKDesktopColor : #979797;
     --color-para : #D0D6F9;
+
     --breakpoint-deskt:1440px;
+
     --ease-smooth : cubic-bezier(0.8, 0, 1, 1);
+    --font-bellefair : 'BelleFair';
+    --font-barlow :'Barlow';
+    --font-barlowCondensed: 'BarlowCondensed' ;
     
 }
+@font-face {
+    font-family: 'BelleFair';
+    src: url(../fonts/Bellefair-Regular.woff);
+};
+@font-face {
+    font-family: 'Barlow';
+    src: url(../fonts/Barlow-Regular.woff);
+};
+@font-face {
+    font-family: 'BarlowCondensed';
+    src: url(../fonts/BarlowCondensed-Regular.woff);
+};
+ 
+/*
+ Using this method instead @apply
+ because tailwindcss utility-class to  counter () in css doesn't exist ! 
+*/
 
-
-button::before {
-
-    @apply animate-pulse  duration-500 ease-smooth;
+@media  screen and (min-width:768px) {
+header ul li:nth-child(2){
+    counter-reset: compteListe ;
 }
+header ul li:nth-child(n+2)::before{
+    margin-right: .5rem;
+    counter-increment: compteListe;
+    content:  "0"counter(compteListe) ;
+    color: white;
+    
+}
+ }
+
+
+@media  screen and (max-width:767px) {
+header ul{
+    counter-reset: compteListe -1;
+}
+header ul li::before{
+    margin-right: 1rem;
+    counter-increment: compteListe;
+    content:  "0"counter(compteListe) ;
+    color: white;
+    
+}  
+}
+
+@layer base{
+
+.etiquette , nav {
+    @apply font-barlowCondensed;
+}
+p{
+    @apply font-barlow;
+}
+h1 , button {
+    @apply font-bellefair;
+}
+}
+
 
 header img:first-child{
     @apply w-[40px] h-[40px]  md:w-[48px] md:h-[48px] object-contain;
+}
+header img:first-child:hover{
+    @apply animate-spin cursor-pointer;
 }
 
 
@@ -39,7 +101,7 @@ header img:first-child{
 }
 
 header nav{
-    @apply lg:relative h-full deskt:h-[96px]  md:w-full   w-navSmallScreenWidth  right-0 top-0 transition-all;
+    @apply lg:relative h-full deskt:h-[96px]  text-para md:w-full   w-navSmallScreenWidth  right-0 top-0 transition-all;
     
 }
 header nav::before {
@@ -49,13 +111,21 @@ header nav::before {
 header li{
     @apply relative md:flex md:items-center md:h-full;
 }
-header ul a:hover::before , header ul li:first-child a::before{
+header ul a:hover::after , header ul li:first-child a::after{
     content: '';
-    @apply w-full h-1 bg-white z-30 absolute bottom-0 ;
+    @apply md:w-full md:h-1 bg-white z-30 absolute md:bottom-0  h-full w-1 right-0;
+}
+header ul li:first-child a::after{
+    @apply bg-para ;
+    
 }
 main{
     @apply p-pdHeroSectionMobile  md:px-pdXHeroSectionTablet md:py-pdYtab_deskt 
 }
 main #textHeroSection .etiquette {
     @apply text-font_Etiquette;
+}
+button::before{
+
+    @apply animate-ping  ease-smooth;
 }
