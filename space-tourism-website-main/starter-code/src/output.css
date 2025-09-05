@@ -193,12 +193,6 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
-  .z-1 {
-    z-index: 1;
-  }
-  .z-10 {
-    z-index: 10;
-  }
   .z-20 {
     z-index: 20;
   }
@@ -213,9 +207,6 @@
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
-  }
-  .block {
-    display: block;
   }
   .flex {
     display: flex;
@@ -232,27 +223,6 @@
   .size-btn_dim1 {
     width: var(--spacing-btn_dim1);
     height: var(--spacing-btn_dim1);
-  }
-  .h-\[\%\] {
-    height: %;
-  }
-  .h-\[9\%\] {
-    height: 9%;
-  }
-  .h-\[79\.4\%\] {
-    height: 79.4%;
-  }
-  .h-\[79\.4\] {
-    height: 79.4;
-  }
-  .h-\[79\.\] {
-    height: 79.;
-  }
-  .h-\[79\] {
-    height: 79;
-  }
-  .h-\[93\.3\%\%\] {
-    height: 93.3%%;
   }
   .h-\[93\.3\%\] {
     height: 93.3%;
@@ -483,11 +453,6 @@
       height: 47.5%;
     }
   }
-  .md\:h-\[72\%\] {
-    @media (width >= 48rem) {
-      height: 72%;
-    }
-  }
   .md\:h-full {
     @media (width >= 48rem) {
       height: 100%;
@@ -565,9 +530,34 @@
       position: relative;
     }
   }
+  .lg\:mb-\[128px\] {
+    @media (width >= 64rem) {
+      margin-bottom: 128px;
+    }
+  }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
   .lg\:h-\[15\.3\%\] {
     @media (width >= 64rem) {
       height: 15.3%;
+    }
+  }
+  .lg\:h-\[72\%\] {
+    @media (width >= 64rem) {
+      height: 72%;
+    }
+  }
+  .lg\:h-fit {
+    @media (width >= 64rem) {
+      height: fit-content;
+    }
+  }
+  .lg\:h-full {
+    @media (width >= 64rem) {
+      height: 100%;
     }
   }
   .lg\:max-h-32 {
@@ -575,9 +565,24 @@
       max-height: calc(var(--spacing) * 32);
     }
   }
+  .lg\:max-h-\[632px\] {
+    @media (width >= 64rem) {
+      max-height: 632px;
+    }
+  }
+  .lg\:max-h-full {
+    @media (width >= 64rem) {
+      max-height: 100%;
+    }
+  }
   .lg\:w-\[52\%\] {
     @media (width >= 64rem) {
       width: 52%;
+    }
+  }
+  .lg\:w-\[77\%\] {
+    @media (width >= 64rem) {
+      width: 77%;
     }
   }
   .lg\:max-w-\[736px\] {
@@ -585,9 +590,44 @@
       max-width: 736px;
     }
   }
+  .lg\:max-w-\[1110px\] {
+    @media (width >= 64rem) {
+      max-width: 1110px;
+    }
+  }
+  .lg\:grid-cols-2 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-rows-1 {
+    @media (width >= 64rem) {
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+    }
+  }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
+  .lg\:items-end {
+    @media (width >= 64rem) {
+      align-items: flex-end;
+    }
+  }
   .lg\:justify-between {
     @media (width >= 64rem) {
       justify-content: space-between;
+    }
+  }
+  .lg\:justify-end {
+    @media (width >= 64rem) {
+      justify-content: flex-end;
+    }
+  }
+  .lg\:gap-y-0 {
+    @media (width >= 64rem) {
+      row-gap: calc(var(--spacing) * 0);
     }
   }
   .lg\:bg-transparent {
@@ -610,11 +650,46 @@
       padding-top: calc(var(--spacing) * 10);
     }
   }
+  .lg\:pb-\[128px\] {
+    @media (width >= 64rem) {
+      padding-bottom: 128px;
+    }
+  }
+  .lg\:text-left {
+    @media (width >= 64rem) {
+      text-align: left;
+    }
+  }
   .lg\:backdrop-blur-2xl {
     @media (width >= 64rem) {
       --tw-backdrop-blur: blur(var(--blur-2xl));
       -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
       backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    }
+  }
+  .lg\:before\:right-0 {
+    @media (width >= 64rem) {
+      &::before {
+        content: var(--tw-content);
+        right: calc(var(--spacing) * 0);
+      }
+    }
+  }
+  .lg\:before\:left-0 {
+    @media (width >= 64rem) {
+      &::before {
+        content: var(--tw-content);
+        left: calc(var(--spacing) * 0);
+      }
+    }
+  }
+  .lg\:before\:-translate-x-0 {
+    @media (width >= 64rem) {
+      &::before {
+        content: var(--tw-content);
+        --tw-translate-x: calc(var(--spacing) * -0);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
     }
   }
 }

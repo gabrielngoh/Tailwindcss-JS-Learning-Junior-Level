@@ -32,9 +32,9 @@
      </ul>
    </nav>
  </header>
- <main class=" h-full">
-     <div id="container_grid" class="mx-auto md:max-h-[672px]  md:w-[75%] h-[93.3%] grid  grid-cols-1 grid-rows-2  text-center md:gap-y-[48px] gap-y-6">
-      <div id="textHeroSection" class="flex flex-col md:h-[47.5%]  md:max-h-[334px] gap-y-[7.2%] max-gap-y-headerPadding text-para" aria-label="text main ">
+ <main class=" h-full lg:flex lg:items-center ">
+     <div id="container_grid" class="lg:h-fit mx-auto lg:max-w-[1110px] lg:w-[77%] lg:grid-rows-1 lg:max-h-[632px]  lg:gap-y-0 lg:grid-cols-2  md:max-h-[672px]  md:w-[75%] h-[93.3%] grid  grid-cols-1 grid-rows-2  text-center md:gap-y-[48px] gap-y-6">
+      <div id="textHeroSection" class="flex lg:text-left lg:h-full flex-col md:h-[47.5%]  md:max-h-[334px] gap-y-[7.2%] max-gap-y-headerPadding text-para" aria-label="text main ">
         <span aria-label="etiquette" class="etiquette">SO , YOU WANT TO TRAVEL TO</span>
         <h1 class="text-white text-h1   ">SPACE</h1>
         <p class=" text-para"> Let’s face it; if you want to go to space, you might as well genuinely go to 
@@ -42,10 +42,12 @@
   because we’ll give you a truly out of this world experience!</p>
 
      </div>
-     <div id="buttonHeroSection" aria-label="button main" class=" relative flex md:max-h-[272px] md:h-full justify-center items-center">
-      <button type="button" class="hover:before:visible  before:top-1/2  before:-translate-1/2 before:left-1/2 z-20 before:size-btn_hover before:rounded-full before:invisible before:bg-white before:opacity-10 before:absolute size-btn_dim1 md:size-btn_dim2 rounded-full text-btn-text border-transparent bg-white  ">EXPLORE</button>
+     <div id="buttonHeroSection" aria-label="button main" class=" relative lg:justify-end lg:items-center lg:max-h-full flex md:max-h-[272px] md:h-full justify-center items-center">
+      <button type="button" class="hover:before:visible  before:top-1/2  before:-translate-1/2 lg:before:-translate-x-0 lg:before:right-0 before:left-1/2 z-20 before:size-btn_hover before:rounded-full before:invisible before:bg-white before:opacity-10 before:absolute size-btn_dim1 md:size-btn_dim2 rounded-full text-btn-text border-transparent bg-white  ">EXPLORE</button>
      </div>
      </div>
+     <!--
+     Faire le calcul pour bien placer le before -->
  </main>
  <script src="./app.js"></script>
 </body>
