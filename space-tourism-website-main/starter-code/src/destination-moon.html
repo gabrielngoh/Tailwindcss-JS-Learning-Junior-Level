@@ -33,24 +33,26 @@
    </nav>
  </header>
 <section class=" p-pdHeroSectionMobile md:p-pdXHeroSectionTablet lg:py-forthy-height">
- <header>
-  <span id="dest_etiquette" aria-label="Etiquette for destination">PICK YOUR DESTINATION</span>
+ <header class="mb-6 md:text-left text-center ">
+  <span id="dest_etiquette" class="text-white text-base sm:text-left text md:text-h1_dest " aria-label="Etiquette for destination">PICK YOUR DESTINATION</span>
  </header>
- <main class="" aria-label="destinationContent">
-  <img src="./assets/destination/image-moon.png" alt="moon Image">
-  <div class="" id="text__Destination" >
-    <ul aria-label="list of destination">
-      <li><a href="./destination-moon.html">MOON</a></li>
+ <main id="mainDestination" class="place-items-center  lg:grid-cols-2 lg:grid-rows-1" aria-label="destinationContent">
+  <div class="mb-6">
+    <img src="./assets/destination/image-moon.png" class=" size-img_Dest_mobile md:size-img_Dest_tablet lg:size-img_Dest_laptop" alt="moon Image">
+  </div>
+  <div class=" text-center" id="text__Destination" class="flex justify-center " >
+    <ul aria-label="list of destination" class="flex justify-around h-fit  text-li-dest mb-6">
+      <li class="text-white"><a href="./destination-moon.html" class="border-white">MOON</a></li>
       <li><a href="./destination-mars.html">MARS</a></li>
       <li><a href="./destination-europa.html">EUROPA</a></li>
       <li><a href="./destination-titan.html">TITAN</a></li>
     </ul>
-    <h1 class=" text-white">MOON</h1>
-    <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+    <h1 class=" text-white lg:text-8xl md:text-7xl text-5xl mb-6">MOON</h1>
+    <p class="mb-6">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
       regain perspective and come back refreshed. While you’re there, take in some history 
         by visiting the Luna 2 and Apollo 11 landing sites.
     </p>
-    <div class="travel__Info">
+    <div class="travel__Info flex flex-col *:flex *:flex-col">
       <div class="left__travel">
         <span>AVG. DISTANCE</span>
         <span>384,400 km</span>

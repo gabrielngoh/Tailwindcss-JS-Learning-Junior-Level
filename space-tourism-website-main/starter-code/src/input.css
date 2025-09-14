@@ -13,12 +13,18 @@
     --spacing-btn_dim1 : 144px;
     --spacing-btn_dim2 : 272px;
     --spacing-btn_hover : 327px;
-    
+    --spacing-img_Dest_mobile:150px;
+    --spacing-img_Dest_tablet : 300px;
+    --spacing-img_Dest_laptop : 480px;
+    --spacing-img_parent : calc(2.18 * 150px);
     --text-font_Etiquette : clamp(1.1875rem, 0.8574rem + 1.4085vw, 2.125rem);
     --text-h1 : clamp(5rem, 3.5915rem + 6.0094vw, 9rem);
     --text-para:clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem); 
     --text-btn-text : clamp(1.125rem, 0.2858rem + 3.5806vw, 2rem);
-
+    --text-h1_dest : clamp(1.25rem, 0.625rem + 2vw, 1.75rem);;
+    --text-li-dest : clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+    --text-5xl : 56px;
+    --text-7xl : 80px;
     --color-sticKDesktopColor : #979797;
     --color-para : #D0D6F9;
 
@@ -138,4 +144,22 @@ main #textHeroSection .etiquette {
 button::before{
 
     @apply animate-ping  ease-smooth;
+}
+/* */
+#dest_etiquette::before{
+    @apply mr-4 text-para mb-6;
+    content:  "01";
+}  
+#mainDestination{
+    display: grid;
+    height: fit ;
+
+    grid-template-rows: max(41.5% , 203px) 1fr;
+    place-items: center;
+}
+#mainDestination a {
+    @apply pb-2 border-b-4 ;
+}
+#mainDestination ul li:nth-child(n + 2) a{
+    @apply border-transparent;
 }
