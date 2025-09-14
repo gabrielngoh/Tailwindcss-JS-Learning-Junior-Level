@@ -3,6 +3,7 @@
     --spacing-header : 12.5%;
     --spacing-medheader : 10.4%;
     --spacing-headerPadding : 24px;
+    --spacing-forthy-height:48px;
     --spacing-navSmallScreenWidth : 67.7%;
     --spacing-navMdeiumScreenWidth : 83.4%;
     --spacing-stickDesktopPosition : calc(66.6% + 40px);
@@ -75,6 +76,9 @@ header ul li::before{
 }
 
 @layer base{
+body{
+    @apply text-para
+}
 
 .etiquette , nav {
     @apply font-barlowCondensed;
@@ -115,13 +119,19 @@ header ul a:hover::after , header ul li:first-child a::after{
     content: '';
     @apply md:w-full md:h-1 bg-white z-30 absolute md:bottom-0  h-full w-1 right-0;
 }
+ #destination_header ul li:nth-child(1) a::after{
+    content: '';
+    @apply hidden;
+}
+ #destination_header ul li:nth-child(2) a::after{
+    content: '';
+    @apply md:w-full md:h-1 bg-white z-30 absolute md:bottom-0  h-full w-1 right-0;
+}
 header ul li:first-child a::after{
     @apply bg-para ;
     
 }
-main{
-    @apply p-pdHeroSectionMobile  md:px-pdXHeroSectionTablet md:py-pdYtab_deskt 
-}
+
 main #textHeroSection .etiquette {
     @apply text-font_Etiquette;
 }

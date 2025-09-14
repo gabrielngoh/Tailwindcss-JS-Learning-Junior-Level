@@ -3,14 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="./output.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
-
-  00 Home 
+<body class="relative h-screen  overflow-hidden  bg-[url(./assets/destination/background-destination-mobile.jpg)]  md:bg-[url(./assets/destination/background-destination-tablet.jpg)]  lg:bg-[url(./assets/destination/background-destination-desktop.jpg)] lg:bg-top bg-cover bg-no-repeat bg-center">
+  <header id="destination_header" class="h-header lg:h-[15.3%] lg:max-h-32 lg:pt-10 lg:justify-between md:h-[10.4%]  md:p-0  md:justify-stretch p-headerPadding  flex md:items-center justify-between">
+  <img src="./assets/shared/logo.svg" alt="hamburger menu" class="md:mx-10">
+  <img  id="hamburger" src="./assets/shared/icon-hamburger.svg" class="md:hidden " alt="hamburger menu">
+   <nav class="lg:relative lg:w-[52%] lg:max-w-[736px] lg:backdrop-blur-2xl lg:bg-transparent md:block md:backdrop-blur-none md:relative  hidden backdrop-blur-md absolute z-50 right-0 pl-8">
+    <div aria-label="close-btn line" class="flex justify-end pr-6 mb-12 md:hidden">
+      <img  id="closeBtn" src="./assets/shared/icon-close.svg" class=" mb-12 my-8" alt="close icon"> 
+    </div>
+    <ul class="relative md:flex-row md:justify-end md:gap-12 md:items-center md:h-full w-[86.6%] h-[172px]  flex flex-col  justify-between">
+        <li class="num_menu">
+          <a href="./index.html">HOME</a>
+        </li>
+        <li>
+          <a href="./destination-moon.html">DESTINATION</a>
+        </li>
+        <li>
+          <a href="#">CREW</a>
+        </li>
+        <li>
+          <a href="#">TECHNOLOGY</a>
+        </li>
+     </ul>
+   </nav>
+ </header>
+<section class=" p-pdHeroSectionMobile md:p-pdXHeroSectionTablet lg:py-forthy-height">
+ <header>
+  <span id="dest_etiquette" aria-label="Etiquette for destination">PICK YOUR DESTINATION</span>
+ </header>
+ <main class="" aria-label="destinationContent">
+  <img src="./assets/destination/image-moon.png" alt="moon Image">
+  <div class="" id="text__Destination" >
+    <ul aria-label="list of destination">
+      <li><a href="./destination-moon.html">MOON</a></li>
+      <li><a href="./destination-mars.html">MARS</a></li>
+      <li><a href="./destination-europa.html">EUROPA</a></li>
+      <li><a href="./destination-titan.html">TITAN</a></li>
+    </ul>
+    <h1 class=" text-white">MOON</h1>
+    <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+      regain perspective and come back refreshed. While you’re there, take in some history 
+        by visiting the Luna 2 and Apollo 11 landing sites.
+    </p>
+    <div class="travel__Info">
+      <div class="left__travel">
+        <span>AVG. DISTANCE</span>
+        <span>384,400 km</span>
+      </div>
+      <div class="right__travel">
+        <span>EST. TRAVEL TIME</span>
+        <span>3 DAYS</span>
+      </div>
+    </div>
+  </div>
+ </main>
+</section>
+  <!-- 00 Home 
   01 Destination
   02 Crew
   03 Technology
@@ -32,6 +85,8 @@
   384,400 km
 
   Est. travel time
-  3 days
+  3 days -->
+   <script src="./app.js"></script>
+
 </body>
 </html>
