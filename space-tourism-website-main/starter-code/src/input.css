@@ -34,6 +34,7 @@
     --font-bellefair : 'BelleFair';
     --font-barlow :'Barlow';
     --font-barlowCondensed: 'BarlowCondensed' ;
+    --text-destinationNumInfo : 1.75rem ;
     
 }
 @font-face {
@@ -153,7 +154,6 @@ button::before{
 #mainDestination{
     display: grid;
     height: fit ;
-
     grid-template-rows: max(41.5% , 203px) 1fr;
     place-items: center;
 }
@@ -162,4 +162,8 @@ button::before{
 }
 #mainDestination ul li:nth-child(n + 2) a{
     @apply border-transparent;
+}
+
+.travelNumInfo{
+    @apply text-destinationNumInfo text-white;
 }

@@ -51,6 +51,7 @@
     --font-bellefair: 'BelleFair';
     --font-barlow: 'Barlow';
     --font-barlowCondensed: 'BarlowCondensed';
+    --text-destinationNumInfo: 1.75rem;
   }
 }
 @layer base {
@@ -309,11 +310,18 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .border-t-1 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
   .border-transparent {
     border-color: transparent;
   }
   .border-white {
     border-color: var(--color-white);
+  }
+  .border-t-sticKDesktopColor {
+    border-top-color: var(--color-sticKDesktopColor);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -338,6 +346,9 @@
   }
   .p-pdHeroSectionMobile {
     padding: var(--spacing-pdHeroSectionMobile);
+  }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
   }
   .pr-6 {
     padding-right: calc(var(--spacing) * 6);
@@ -969,6 +980,10 @@ button::before {
 #mainDestination ul li:nth-child(n + 2) a {
   border-color: transparent;
 }
+.travelNumInfo {
+  font-size: var(--text-destinationNumInfo);
+  color: var(--color-white);
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -988,6 +1003,11 @@ button::before {
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-backdrop-blur {
   syntax: "*";
@@ -1049,11 +1069,6 @@ button::before {
   inherits: false;
   initial-value: 0;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -1073,6 +1088,7 @@ button::before {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
@@ -1087,7 +1103,6 @@ button::before {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
-      --tw-border-style: solid;
     }
   }
 }
