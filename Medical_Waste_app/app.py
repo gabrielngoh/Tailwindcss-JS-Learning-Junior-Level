@@ -3,9 +3,8 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 
-# ================================
-# Configuration de la page
-# ================================
+#Configuration de la page 
+
 st.set_page_config(
     page_title="Système de Gestion des Déchets Hospitaliers",
     layout="centered"
@@ -13,16 +12,15 @@ st.set_page_config(
 
 st.title("🩺 Système de Gestion des Déchets Hospitaliers")
 
-# Logo
-logo_path = "logo_cameroun_medical.png"
+# Logo 
+
+logo_path = "Logo.png"
 try:
     st.image(logo_path, width=100)
 except:
     st.info("🔔 Logo non trouvé. Ajoutez 'logo_cameroun_medical.png' dans le dossier.")
 
-# ================================
-# Chargement du modèle IA
-# ================================
+# Chargement du modele 
 @st.cache_resource
 def load_model():
     model = tf.keras.models.load_model("medical_waste_model_simple.h5", compile=False)
@@ -30,9 +28,8 @@ def load_model():
 
 model = load_model()
 
-# ================================
-# Classes dans le même ordre que le dataset TensorFlow
-# ================================
+# Liste des differentes classes du modele
+
 class_names = [
     'gauze',
     'glove_pair_latex',
@@ -50,10 +47,8 @@ class_names = [
 ]
 
 IMG_SIZE = (180, 180)
+# Fonction de prediction des classes des images 
 
-# ================================
-# Fonction de prédiction
-# ================================
 def predict_image_streamlit(image):
     # Conversion en RGB et redimensionnement
     img = image.convert("RGB").resize(IMG_SIZE)
@@ -61,22 +56,21 @@ def predict_image_streamlit(image):
     # Conversion en tableau numpy float32
     arr = np.array(img).astype("float32")
 
-    # Préprocessing EfficientNet (comme à l'entraînement)
+    # Pretraitement acec efficientNet 
     arr = tf.keras.applications.efficientnet.preprocess_input(arr)
 
-    # Ajouter la dimension batch
+    #  Ajout des dimensions batch
     arr = np.expand_dims(arr, axis=0)
 
-    # Prédiction
+    # Prédiction du modele 
+    
     pred = model.predict(arr)
     cid = np.argmax(pred[0])
     confidence = pred[0][cid]
 
     return class_names[cid], confidence
 
-# ================================
-# Interface Streamlit
-# ================================
+#Creation de l'inteface sur Streamlit 
 st.header("🖼️ Importer une image de déchet hospitalier")
 
 image_file = st.file_uploader("➡️ Sélectionnez une image", type=['png', 'jpg', 'jpeg'])
@@ -87,12 +81,12 @@ if image_file:
     st.image(img, width=400)
 
     if st.button("🔍 Prédire le type de déchet"):
-        with st.spinner("Analyse de l’image..."):
+        with st.spinner("Analyse de l’image en cours ..."):
             predicted_class, confidence = predict_image_streamlit(img)
 
         st.success("🎉 Prédiction terminée !")
-        st.write(f"### 🧠 Type de déchet détecté : **{predicted_class}**")
-        st.write(f"🔎 Confiance : **{confidence*100:.2f}%**")
+        st.write(f"### 🧠 Type de déchet hospitalier détecté : **{predicted_class}**")
+        st.write(f"🔎 Niveau de confiance : **{confidence*100:.2f}%**")
 
 else:
     st.warning("⚠️ Aucune image importée.")
